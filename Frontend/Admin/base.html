@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Frontend/admin/css/base.css" />
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-logo"><i class="fas fa-code"></i> Admin</span>
+      <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="/Frontend/admin/dashboard.html" class="sidebar-link" data-page="dashboard">
+        <i class="fas fa-chart-pie"></i> Dashboard
+      </a>
+      <a href="/Frontend/admin/profiles.html" class="sidebar-link" data-page="profiles">
+        <i class="fas fa-user"></i> Profil
+      </a>
+      <a href="/Frontend/admin/skills.html" class="sidebar-link" data-page="skills">
+        <i class="fas fa-star"></i> Skills
+      </a>
+      <a href="/Frontend/admin/experience.html" class="sidebar-link" data-page="experience">
+        <i class="fas fa-briefcase"></i> Pengalaman
+      </a>
+      <a href="/Frontend/admin/projects.html" class="sidebar-link" data-page="projects">
+        <i class="fas fa-folder-open"></i> Proyek
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="/" target="_blank" class="sidebar-link">
+        <i class="fas fa-external-link-alt"></i> Lihat Portfolio
+      </a>
+      <button class="sidebar-link btn-logout" id="btn-logout">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+  </aside>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-wrap">
+    <header class="topbar">
+      <button class="hamburger-btn" id="hamburger-btn"><i class="fas fa-bars"></i></button>
+      <h2 class="topbar-title" id="topbar-title">Dashboard</h2>
+      <div class="topbar-user">
+        <i class="fas fa-user-circle"></i>
+        <span id="topbar-email">admin</span>
+      </div>
+    </header>
+    <main class="content-area" id="content-area">
+      <!-- Page content injected here -->
+    </main>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <script src="/Frontend/admin/js/api.js"></script>
+  <script src="/Frontend/admin/js/base.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* === EXPERIENCE PAGE === */
+.exp-list { display: flex; flex-direction: column; gap: 16px; }
+.exp-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 24px;
+  display: flex; gap: 16px; align-items: flex-start;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.exp-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.exp-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 1.1rem;
+}
+.exp-body { flex: 1; min-width: 0; }
+.exp-title { font-size: 1rem; font-weight: 700; color: var(--text); }
+.exp-company { font-size: 0.88rem; color: var(--primary); font-weight: 600; margin-top: 2px; }
+.exp-period { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+.exp-desc { font-size: 0.87rem; color: var(--text-light); margin-top: 8px; line-height: 1.6; }
+.exp-actions { display: flex; gap: 6px; flex-shrink: 0; }

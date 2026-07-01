@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Admin Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Frontend/admin/css/base.css" />
+  <link rel="stylesheet" href="/Frontend/admin/css/dashboard.css" />
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-logo"><i class="fas fa-code"></i> Admin</span>
+      <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="sidebar-link active"><i class="fas fa-chart-pie"></i> Dashboard</a>
+      <a href="profiles.html" class="sidebar-link"><i class="fas fa-user"></i> Profil</a>
+      <a href="skills.html" class="sidebar-link"><i class="fas fa-star"></i> Skills</a>
+      <a href="experience.html" class="sidebar-link"><i class="fas fa-briefcase"></i> Pengalaman</a>
+      <a href="projects.html" class="sidebar-link"><i class="fas fa-folder-open"></i> Proyek</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="/" target="_blank" class="sidebar-link"><i class="fas fa-external-link-alt"></i> Lihat Portfolio</a>
+      <button class="sidebar-link btn-logout" id="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <div class="main-wrap">
+    <header class="topbar">
+      <button class="hamburger-btn" id="hamburger-btn"><i class="fas fa-bars"></i></button>
+      <h2 class="topbar-title">Dashboard</h2>
+      <div class="topbar-user"><i class="fas fa-user-circle"></i><span id="topbar-email">admin</span></div>
+    </header>
+    <main class="content-area">
+      <div class="page-header">
+        <h1 class="page-title">Selamat Datang! 👋</h1>
+        <p class="page-subtitle">Ringkasan data portfolio kamu.</p>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card"><div class="stat-icon bg-blue"><i class="fas fa-star"></i></div><div class="stat-info"><span class="stat-num" id="stat-skills">-</span><span class="stat-label">Skills</span></div></div>
+        <div class="stat-card"><div class="stat-icon bg-purple"><i class="fas fa-briefcase"></i></div><div class="stat-info"><span class="stat-num" id="stat-exp">-</span><span class="stat-label">Pengalaman</span></div></div>
+        <div class="stat-card"><div class="stat-icon bg-green"><i class="fas fa-folder-open"></i></div><div class="stat-info"><span class="stat-num" id="stat-proj">-</span><span class="stat-label">Proyek</span></div></div>
+        <div class="stat-card"><div class="stat-icon bg-orange"><i class="fas fa-envelope"></i></div><div class="stat-info"><span class="stat-num" id="stat-msg">-</span><span class="stat-label">Pesan <span id="stat-unread" class="badge-unread"></span></span></div></div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="quick-links">
+        <h3>Kelola Portfolio</h3>
+        <div class="quick-grid">
+          <a href="profiles.html" class="quick-card"><i class="fas fa-user"></i><span>Edit Profil</span></a>
+          <a href="skills.html" class="quick-card"><i class="fas fa-star"></i><span>Kelola Skills</span></a>
+          <a href="experience.html" class="quick-card"><i class="fas fa-briefcase"></i><span>Kelola Pengalaman</span></a>
+          <a href="projects.html" class="quick-card"><i class="fas fa-folder-open"></i><span>Kelola Proyek</span></a>
+        </div>
+      </div>
+
+      <!-- Recent Messages -->
+      <div class="recent-messages">
+        <div class="section-head">
+          <h3>Pesan Terbaru</h3>
+        </div>
+        <div id="messages-list"><div class="empty-state">Memuat pesan...</div></div>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="/Frontend/admin/js/api.js"></script>
+  <script src="/Frontend/admin/js/base.js"></script>
+  <script src="/Frontend/admin/js/dashboard.js"></script>
+</body>
+</html>

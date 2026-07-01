@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Frontend/utama/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo">Porto.</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <img src="https://placehold.co/200x200/93c5fd/1d4ed8?text=Foto" alt="Foto Profil" class="hero-photo" id="hero-photo" />
+      </div>
+      <p class="hero-greeting">✨ Selamat Datang di Portofolio Saya</p>
+      <h1 class="hero-title">Halo, Saya <span id="hero-name">Nama Kamu</span></h1>
+      <p class="hero-tagline" id="hero-tagline">Backend Developer & Python Enthusiast</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">Lihat Proyek Saya</a>
+        <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+      </div>
+    </div>
+    <div class="hero-bg-blur"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo-col">
+          <div class="about-photo-wrap">
+            <img src="https://placehold.co/400x400/93c5fd/1d4ed8?text=Foto" alt="Foto Profil" id="about-photo" class="about-photo" />
+          </div>
+        </div>
+        <div class="about-info-col">
+          <h3 class="about-subtitle" id="about-tagline">Backend Developer & Python Enthusiast</h3>
+          <p class="about-bio" id="about-bio">Saya memiliki ketertarikan yang besar dalam merancang arsitektur backend yang solid, mengelola database, dan membangun API yang handal.</p>
+          <div class="about-details" id="about-details"></div>
+          <div class="about-social" id="about-social"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Keahlian</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid" id="skills-grid">
+        <div class="loading-state">Memuat data...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Pengalaman</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline" id="experience-list">
+        <div class="loading-state">Memuat data...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Proyek Saya</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <div class="loading-state">Memuat data...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Tertarik untuk berkolaborasi atau punya pertanyaan? Jangan ragu untuk mengirim pesan.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" id="c-name" placeholder="Nama kamu" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="c-email" placeholder="email@kamu.com" required />
+          </div>
+          <div class="form-group">
+            <label>Subjek</label>
+            <input type="text" id="c-subject" placeholder="Tentang apa?" />
+          </div>
+          <div class="form-group">
+            <label>Pesan</label>
+            <textarea id="c-message" rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <i class="fas fa-paper-plane"></i> Kirim Pesan
+          </button>
+          <div id="form-feedback" class="form-feedback"></div>
+        </form>
+        <div class="contact-info" id="contact-info">
+          <div class="contact-info-card">
+            <h3>Info Kontak</h3>
+            <div id="contact-details"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p id="footer-text">© 2025 Nama Kamu. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- BG COLOR SWITCHER -->
+  <div class="bg-switcher" id="bg-switcher">
+    <button class="bg-toggle-btn" id="bg-toggle" title="Ganti Background">
+      <i class="fas fa-palette"></i>
+    </button>
+    <div class="bg-panel" id="bg-panel">
+      <p class="bg-panel-title">Warna Background</p>
+      <div class="bg-colors">
+        <button class="bg-color-btn" data-color="#dbeafe" style="background:#dbeafe" title="Biru Pastel"></button>
+        <button class="bg-color-btn" data-color="#ede9fe" style="background:#ede9fe" title="Ungu Pastel"></button>
+        <button class="bg-color-btn" data-color="#dcfce7" style="background:#dcfce7" title="Hijau Pastel"></button>
+        <button class="bg-color-btn" data-color="#fce7f3" style="background:#fce7f3" title="Pink Pastel"></button>
+        <button class="bg-color-btn" data-color="#fef9c3" style="background:#fef9c3" title="Kuning Pastel"></button>
+        <button class="bg-color-btn" data-color="#ffedd5" style="background:#ffedd5" title="Orange Pastel"></button>
+        <button class="bg-color-btn" data-color="#f1f5f9" style="background:#f1f5f9" title="Abu-abu"></button>
+        <button class="bg-color-btn" data-color="#ffffff" style="background:#ffffff; border:1px solid #e2e8f0" title="Putih"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/Frontend/utama/js/script.js"></script>
+</body>
+</html>

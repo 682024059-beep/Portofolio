@@ -1,0 +1,58 @@
+/* === PROFILES PAGE === */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.photo-card { text-align: center; }
+.photo-preview-wrap {
+  position: relative;
+  width: 160px; height: 160px;
+  margin: 0 auto 12px;
+  cursor: pointer;
+}
+.photo-preview {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-light);
+  box-shadow: 0 4px 20px rgba(59,130,246,0.2);
+}
+.photo-overlay {
+  position: absolute; inset: 0;
+  background: rgba(30,58,95,0.55);
+  border-radius: 50%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 4px; color: white;
+  font-size: 0.82rem; font-weight: 600;
+  opacity: 0; transition: opacity 0.25s ease;
+  cursor: pointer;
+}
+.photo-preview-wrap:hover .photo-overlay { opacity: 1; }
+.photo-overlay i { font-size: 1.4rem; }
+.photo-hint { font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; }
+
+.color-options {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 8px;
+}
+.color-opt {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+.color-opt:hover { transform: scale(1.15); }
+.color-opt.active {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary);
+}
+
+@media (max-width: 900px) {
+  .profile-grid { grid-template-columns: 1fr; }
+  .photo-card { max-width: 300px; margin: 0 auto; }
+}

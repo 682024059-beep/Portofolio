@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills - Admin Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Frontend/admin/css/base.css" />
+  <link rel="stylesheet" href="/Frontend/admin/css/skills.css" />
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-logo"><i class="fas fa-code"></i> Admin</span>
+      <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="sidebar-link"><i class="fas fa-chart-pie"></i> Dashboard</a>
+      <a href="profiles.html" class="sidebar-link"><i class="fas fa-user"></i> Profil</a>
+      <a href="skills.html" class="sidebar-link active"><i class="fas fa-star"></i> Skills</a>
+      <a href="experience.html" class="sidebar-link"><i class="fas fa-briefcase"></i> Pengalaman</a>
+      <a href="projects.html" class="sidebar-link"><i class="fas fa-folder-open"></i> Proyek</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="/" target="_blank" class="sidebar-link"><i class="fas fa-external-link-alt"></i> Lihat Portfolio</a>
+      <button class="sidebar-link btn-logout" id="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <div class="main-wrap">
+    <header class="topbar">
+      <button class="hamburger-btn" id="hamburger-btn"><i class="fas fa-bars"></i></button>
+      <h2 class="topbar-title">Skills</h2>
+      <div class="topbar-user"><i class="fas fa-user-circle"></i><span id="topbar-email">admin</span></div>
+    </header>
+    <main class="content-area">
+      <div class="page-header-row">
+        <div>
+          <h1 class="page-title">Kelola Skills</h1>
+          <p class="page-subtitle">Tambah, edit, atau hapus keahlian yang ditampilkan.</p>
+        </div>
+        <button class="btn btn-primary" id="btn-add-skill"><i class="fas fa-plus"></i> Tambah Skill</button>
+      </div>
+
+      <div class="card">
+        <table class="data-table" id="skills-table">
+          <thead>
+            <tr><th>#</th><th>Nama</th><th>Kategori</th><th>Level</th><th>Urutan</th><th>Aksi</th></tr>
+          </thead>
+          <tbody id="skills-tbody">
+            <tr><td colspan="6" class="empty-state">Memuat data...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-title">Tambah Skill</h3>
+        <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <form id="skill-form">
+        <input type="hidden" id="skill-id" />
+        <div class="form-group"><label>Nama Skill *</label><input type="text" id="sk-name" placeholder="Python" required /></div>
+        <div class="form-row">
+          <div class="form-group"><label>Kategori</label><input type="text" id="sk-category" placeholder="Backend, Frontend, Tools..." /></div>
+          <div class="form-group"><label>Level (0-100)</label><input type="number" id="sk-level" min="0" max="100" value="80" /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Icon URL (opsional)</label><input type="url" id="sk-icon" placeholder="https://..." /></div>
+          <div class="form-group"><label>Urutan</label><input type="number" id="sk-order" value="0" /></div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-ghost" id="btn-cancel">Batal</button>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="/Frontend/admin/js/api.js"></script>
+  <script src="/Frontend/admin/js/base.js"></script>
+  <script src="/Frontend/admin/js/skills.js"></script>
+</body>
+</html>
